@@ -4,20 +4,18 @@
     <div v-text="channel"></div>
     <div v-html="channel"></div> -->
 
-    <h2 v-bind:id="headingId">Heading</h2>
-    <button v-bind:disabled="isDisabled">Bind</button>
+    <h2 :id="headingId">Heading</h2>
+    <button :disabled="isDisabled">Bind</button>
     <h2 class="underline">Underlined text</h2>
-    <h2 class="underline" v-bind:class="status">Status</h2>
-    <h2 v-bind:class="isPromoted && 'promoted'">Promoted movie</h2>
-    <h2 v-bind:class="isSoldOut ? 'sold-out' : 'new'">Soldout? movie</h2>
-    <h2 v-bind:class="['new', 'promoted']">Newly promoted movie</h2>
-    <h2
-      v-bind:class="[isPromoted && 'promoted', isSoldOut ? 'sold-out' : 'new']"
-    >
+    <h2 class="underline" :class="status">Status</h2>
+    <h2 :class="isPromoted && 'promoted'">Promoted movie</h2>
+    <h2 :class="isSoldOut ? 'sold-out' : 'new'">Soldout? movie</h2>
+    <h2 :class="['new', 'promoted']">Newly promoted movie</h2>
+    <h2 :class="[isPromoted && 'promoted', isSoldOut ? 'sold-out' : 'new']">
       Array conditional movie
     </h2>
     <h2
-      v-bind:class="{
+      :class="{
         promoted: isPromoted,
         new: !isSoldOut,
         'sold-out': isSoldOut,
@@ -25,6 +23,18 @@
     >
       Object conditional movie
     </h2>
+    <h2
+      :style="{
+        color: highlightColor,
+        fontSize: headerSize + 'px',
+        padding: '20px',
+      }"
+    >
+      Inline style
+    </h2>
+    <h2 :style="headerStyleObj">Style obj</h2>
+    <div :style="[baseStyleObj, successStyleObj]">Success style</div>
+    <div :style="[baseStyleObj, dangerStyleObj]">Danger style</div>
   </div>
 </template>
 
@@ -41,6 +51,27 @@ export default {
       status: "danger",
       isPromoted: false,
       isSoldOut: false,
+      highlightColor: "orange",
+      headerSize: 50,
+      headerStyleObj: {
+        color: "orange",
+        fontSize: "50px",
+        padding: "20px",
+      },
+      baseStyleObj: {
+        fontSize: "50px",
+        padding: "20px",
+      },
+      successStyleObj: {
+        color: "green",
+        backgroundColor: "lightgreen",
+        border: "1px solid green",
+      },
+      dangerStyleObj: {
+        color: "darkred",
+        backgroundColor: "red",
+        border: "1px solid darkred",
+      },
     };
   },
 };
