@@ -1,14 +1,15 @@
 <template>
+  <!-- Modifiers: trim,prevent,lazy,number,keyup -->
   <div>
     <div>
       <pre>
         {{ JSON.stringify(formValues, null, 2) }}
       </pre>
     </div>
-    <form @submit="submitForm">
+    <form @submit.prevent="submitForm">
       <div>
         <label for="name">Name</label>
-        <input type="text" id="name" v-model="formValues.name" />
+        <input type="text" id="name" v-model.trim.lazy="formValues.name" />
       </div>
       <div>
         <label for="profile">Profile</label>
@@ -97,7 +98,14 @@
         />
         <label for="6-10">6-10</label>
       </div>
-
+      <div>
+        <label for="age">Age</label>
+        <input type="number" id="age" v-model.number="formValues.age" />
+      </div>
+      <!-- <div>
+        <label for="age">Age</label>
+        <input @keyup.enter="submitForm" type="number" id="age" v-model.number="formValues.age" />
+      </div> -->
       <div>
         <button>Submit</button>
       </div>
@@ -107,7 +115,7 @@
 
 <script>
 export default {
-  name: "FormHandling",
+  name: "FormHandlingAndModifiers",
   data() {
     return {
       formValues: {
@@ -118,12 +126,13 @@ export default {
         remoteWork: "no",
         skillSet: [],
         yearsOfExperience: "",
+        age: null,
       },
     };
   },
   methods: {
-    submitForm(e) {
-      e.preventDefault();
+    submitForm() {
+      // e.preventDefault();
       console.log(this.formValues);
     },
   },
