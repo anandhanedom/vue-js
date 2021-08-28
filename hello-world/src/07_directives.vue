@@ -1,12 +1,19 @@
 <template>
-  <div></div>
+  <!-- Directives : v-once, v-pre -->
+  <div>
+    <h2 v-once>{{ name }}</h2>
+    <button @click="name = 'Batman'">Change name</button>
+    <h2 v-pre>{{ name }}</h2>
+  </div>
 </template>
 
 <script>
 export default {
-  name: "App",
+  name: "Directives",
   data() {
-    return {};
+    return {
+      name: "John Doe",
+    };
   },
   methods: {},
 };
