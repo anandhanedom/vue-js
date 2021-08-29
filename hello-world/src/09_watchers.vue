@@ -63,7 +63,7 @@ export default {
 
     movieList: {
       handler(newValue) {
-        console.log(`Updated list ${newValue} `);
+        console.log(`Updated list ${newValue}`);
       },
 
       deep: true, //watch for array when mutating
