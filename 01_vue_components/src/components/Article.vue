@@ -1,4 +1,5 @@
 <template>
+  <!-- 01 Components basic  -->
   <div>
     <h2>Article Component</h2>
     <h2 v-bind="$attrs">{{ title }}</h2>
