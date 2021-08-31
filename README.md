@@ -6,3 +6,4 @@ vue.js reference
 
 ![computed](img/computed.png)
 ![watcher](img/watcher.png)
+![slots](img/slots.png)
