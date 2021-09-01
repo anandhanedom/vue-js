@@ -4,33 +4,32 @@
 
 <script>
 export default {
-  name: 'Child',
+  name: "Child",
   beforeCreate() {
-    console.log('Child beforeCreate()')
+    console.log("Child beforeCreate()");
   },
   created() {
-    console.log('Child created()')
+    console.log("Child created()");
   },
   beforeMount() {
-    console.log('Child beforeMount()')
+    console.log("Child beforeMount()");
   },
   mounted() {
-    console.log('Child mounted()')
+    console.log("Child mounted()");
   },
   beforeUpdate() {
-    console.log('Child beforeUpdate()')
+    console.log("Child beforeUpdate()");
   },
   updated() {
-    console.log('Child updated()')
+    console.log("Child updated()");
   },
   beforeUnmount() {
-    console.log('Child beforeUnmount()')
+    console.log("Child beforeUnmount()");
   },
   unmounted() {
-    console.log('Child unmounted()')
+    console.log("Child unmounted()");
   },
-}
+};
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>
