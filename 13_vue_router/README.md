@@ -1,4 +1,4 @@
-# hello-world
+# ninja-jobs
 
 ## Project setup
 ```

@@ -1,0 +1,19 @@
+<template>
+  <div>
+    <h1>Job Details Page</h1>
+    <p>The job is {{ id }}</p>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "JobDetails",
+  data() {
+    return {
+      id: this.$route.params.id,
+    };
+  },
+};
+</script>
+
+<style lang="scss" scoped></style>
