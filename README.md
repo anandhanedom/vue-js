@@ -10,3 +10,7 @@ vue.js reference
 ![styling](img/styling.png)
 ![lifecycle](img/lifecycle.png)
 ![lifecycleHooks](img/lifecycleHooks.png)
+
+### Style guide
+
+https://vuejs.org/v2/style-guide/
