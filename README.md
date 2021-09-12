@@ -1,6 +1,6 @@
 # vue-js
 
-vue.js reference
+Vue.js reference
 
 ### Watchers vs computed property
 
