@@ -5,14 +5,14 @@
   </div>
 </template>
 <script>
-import ProductListOne from './components/ProductListOne.vue';
-import ProductListTwo from './components/ProductListTwo.vue';
+import ProductListOne from "./components/ProductListOne.vue";
+import ProductListTwo from "./components/ProductListTwo.vue";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    'product-list-one': ProductListOne,
-    'product-list-two': ProductListTwo,
+    "product-list-one": ProductListOne,
+    "product-list-two": ProductListTwo,
   },
   data() {
     return {};
