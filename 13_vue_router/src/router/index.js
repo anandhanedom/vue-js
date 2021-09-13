@@ -27,7 +27,12 @@ const routes = [
     path: "/jobs/:id",
     name: "JobDetails",
     component: JobDetails,
+    props: true,
   },
+  // redirect
+  {
+    path:'/'
+  }
 ];
 
 const router = new VueRouter({
