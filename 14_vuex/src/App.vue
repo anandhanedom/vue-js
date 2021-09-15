@@ -1,28 +1,38 @@
 <template>
   <div id="app">
-    <product-list-one></product-list-one>
-    <product-list-two></product-list-two>
+    <div class="container">
+      <AddTodo />
+      <FilterTodos />
+      <Todos />
+    </div>
   </div>
 </template>
+
 <script>
-import ProductListOne from "./components/ProductListOne.vue";
-import ProductListTwo from "./components/ProductListTwo.vue";
+import Todos from "./components/Todos.vue";
+import AddTodo from "./components/AddTodo.vue";
+import FilterTodos from "./components/FilterTodos.vue";
 
 export default {
   name: "app",
   components: {
-    "product-list-one": ProductListOne,
-    "product-list-two": ProductListTwo,
-  },
-  data() {
-    return {};
+    Todos,
+    AddTodo,
+    FilterTodos,
   },
 };
 </script>
 
 <style>
 body {
-  font-family: Ubuntu;
-  color: #555;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  line-height: 1.6;
+  background: #e8f7f0;
+}
+.container {
+  max-width: 1100px;
+  margin: auto;
+  overflow: auto;
+  padding: 0 2rem;
 }
 </style>
